@@ -1,5 +1,7 @@
 package org.example;
 
+import java.util.ArrayList;
+
 public class Shape {
     void draw(){
         System.out.println("Drawing a shape");
@@ -18,20 +20,15 @@ class Square extends Shape{
 }
 class ExampleDynamicBiding{
     public static void main(String[] args) {
-        // Static Binding
-        Shape staticShape = new Circle(); //Upcasting
-        staticShape.draw();
+        ArrayList<Shape> shapes = new ArrayList<>();
 
-        // Dynamic Binding
-        Shape dynamicShape = getRandomShape(); // Dynamic binding, call draw() method based on the actuel object
+        shapes.add(new Square()); // Compile timne
+        shapes.add(new Circle()); // compile time since it knows which one is being add
 
-        dynamicShape.draw();
-    }
-
-    // At run time which is being called  since we dont which
-    static  Shape getRandomShape(){
-        if(Math.random() < 0.5) return new Circle();
-        else return  new Square();
+        for(Shape shape : shapes){
+            shape.draw();// Dynamic in action this is at runtime  it
+            // does not not which shape which one at refereing at run time  it know which one is being called
+        }
     }
 }
 
