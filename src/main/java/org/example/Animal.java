@@ -17,6 +17,6 @@ class TestStaticBinding{
 
         Animal animal = new Dog();
 
-        animal.sound(); // Static binding
+        animal.sound(); // Static binding compile time
     }
 }
