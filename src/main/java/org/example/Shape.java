@@ -27,7 +27,7 @@ class ExampleDynamicBiding{
 
         for(Shape shape : shapes){
             shape.draw();// Dynamic in action this is at runtime  it
-            // does not not which shape which one at refereing at run time  it know which one is being called
+            // does not  which shape at run time  it know which one is being called not at compile time
         }
     }
 }
