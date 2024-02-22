@@ -73,6 +73,6 @@ class  AuthorAgeComparator implements Comparator<Author1>{
 class  BookNameComparator implements Comparator<Author1>{
     @Override
     public int compare(Author1 o1, Author1 o2) {
-        return  o1.bookName.compareTo(o2.bookName); // no getters because we are referering to two different object
+        return  o1.bookName.compareTo(o2.bookName); // no getters because we are refering to two different object
     }
 }
