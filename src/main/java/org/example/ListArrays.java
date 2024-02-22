@@ -15,5 +15,9 @@ public class ListArrays {
 
         System.out.println(integers.size());
 
+        for(int i = 0; i < integers.size();i++){
+            System.out.println(integers.get(i) + " ");
+        }
+
     }
 }
